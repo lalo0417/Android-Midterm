@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.algonquincollege.lalo0417.android_midterm.MainActivity">
+
+    <TextView
+        android:text="Hue"
+        android:layout_width="wrap_content"
+        android:layout_height="150px"
+        android:id="@+id/hueTxt"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/colorSwatch"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:height="200dp"
+        android:id="@+id/colorSwatch"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Saturation"
+        android:layout_width="wrap_content"
+        android:layout_height="150px"
+        android:id="@+id/saturationTxt"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/hueSB"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saturationSB"
+        android:layout_below="@+id/saturationTxt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/saturation_gradient"/>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hueSB"
+        android:background="@drawable/hue_gradient"
+        android:layout_below="@+id/hueTxt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Value / Lightness"
+        android:layout_width="wrap_content"
+        android:layout_height="150px"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/saturationSB"
+        android:layout_alignParentStart="true"
+        android:id="@+id/valueTxt" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/valueSB"
+        android:layout_below="@+id/valueTxt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/value_gradient"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="150px"
+            android:id="@+id/buttonGroup1">
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/blackBtn"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:layout_marginRight="25px"
+                android:onClick="onColorButtonSelected"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/whiteBtn"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:layout_marginRight="25px"
+                android:onClick="onColorButtonSelected"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/redBtn"
+                android:layout_weight="1"
+                android:background="@color/red"
+                android:layout_marginRight="25px"
+                android:onClick="onColorButtonSelected"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/limeBtn"
+                android:onClick="onColorButtonSelected"
+                android:layout_weight="1"
+                android:background="@color/lime"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/blueBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/blue"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/yellowBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/yellow"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/cyanBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/cyan"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/magentaBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/magenta"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/silverBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/silver"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/grayBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/gray"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/maroonBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/maroon"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/oliveBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/olive"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/greenBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/green"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/purpleBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/purple"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/tealBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/teal"
+                android:layout_marginRight="25px"/>
+
+            <Button
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:id="@+id/navyBtn"
+                android:layout_weight="1"
+                android:onClick="onColorButtonSelected"
+                android:background="@color/navy" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>
